@@ -5,10 +5,10 @@ yls=[]
 for i in range(0,11):
     x1=int(input('x='))
     xis.append(x1)
-    x2=1-x1**4
+    x2=x1**5+x1
     yls.append(x2)
 print(yls)
-x= np.array(xis)
+x = np.array(xis)
 y = np.array(yls)
 y0 = np.array([ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 x0 = np.array([ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
