@@ -1,4 +1,5 @@
 print('y-y1=m(x-x1)')
+print('y=mx+b')
 x,y=map(int,input('point1(x,y):').split(','))
 x2,y2=map(int,input('point2(x1,y1):').split(','))
 xrange=x-x2
