@@ -1,0 +1,9 @@
+st1=(input())
+ee=len(st1)
+odd=st1[0:ee:2]
+ddo=st1[1:ee:2]
+print(odd,ddo)
+od=int(odd)
+do=int(ddo)
+sum=od+do
+print(sum)
