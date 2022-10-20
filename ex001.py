@@ -1,42 +1,40 @@
-''' 請撰寫一程式，輸入A組和B組各自的科目至集合中，以字串"end"作為結束（集合中不包含字串"end"。 請依序分行顯示 (1)A組和B組的所有科目 (2)A組和B組的共同科目 (3)B組有但A組沒有的科目 (4)A組和B組都沒有的科目
-- **範例輸入**
-    
-    **Enter group A's subjects:** Math Literature English History Geography end
-    
-    **Enter group B's subjects:** Math Literature Chinese Physical Chemistry end
-    
-- **範例輸出**
-    
-    **['Chemistry', 'Chinese', 'English', 'Geography', 'History','Literature', 'Math', 'Physical'] 
-    ['Literature', 'Math'] ['Chemistry', 'Chinese', 'Physical'] 
-    ['Chemistry', 'Chinese', 'English', 'Geography', 'History', 'Physical']**
-'''
-ax=set()
+a=set()
 b=set()
-print("Enter group A's subjects:")
+c= {"芒果", "草莓", "水梨", "芭樂", "楊桃", "番茄", "火龍果", "奇異果", "哈密瓜", "葡萄", "西瓜"} 
+print("輸入小明水果店的水果:")
 while True:
-  en=input()
-  if en=="end":
-    
-    break
-  ax.add(en)
+    enter=input()
+    if enter=="結束":
+        break
+    a.add(enter) 
 
-print("Enter group B's subjects:")
+print("輸入大明水果店的水果:")
 while True:
-  e=input()
-  if e=="end":
-    
+  enter=input()
+  if enter=="結束":
     break
-  b.add(e)
- 
- 
- 
-# 印出下列四項 
-# (1)A組和B組的所有科目
-print(ax|b)
-# (2)A組和B組的共同科目
-print(ax&b)
-# (3)B組有但A組沒有的科目
-print(b-ax)
-# (4)A組和B組都沒有的科目
-print(ax-b)
+  b.add(enter)
+print('小明水果店的水果')
+print(a)
+print('大明水果店的水果')
+print(b)
+print('全部有的水果')
+print(c) 
+
+print('小明水果店和大明水果店的所有水果')
+print(a | b)                # 聯集
+
+print('小明水果店和大明水果店的共同水果')
+print(a & b)                # 交集
+
+print('小明水果店沒有進的水果')
+print(c - a)                # 差集
+
+print('大明水果店沒有進的水果')
+print(c - b)                # 差集
+
+print('小明水果店跟大明水果店都沒有進的水果')
+print(c - a - b ) 
+
+print('大明水果店有但是小明水果店沒有的水果')
+print(b - a)                # 差集
